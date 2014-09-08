@@ -1,0 +1,55 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.jonesmattc</groupId>
+    <artifactId>vitamix-parent</artifactId>
+    <packaging>pom</packaging>
+    <version>0.0.1</version>
+
+    <name>vitamix-parent</name>
+    <description>Guice DAEMON library</description>
+
+    <developers>
+        <developer>
+            <name>Matthew Jones</name>
+            <email>jones.matt.c@gmail.com</email>
+        </developer>
+    </developers>
+
+    <modules>
+        <module>vitamix-core</module>
+        <module>vitamix-jersey</module>
+        <module>vitamix-jetty</module>
+        <module>vitamix-varexport</module>
+        <module>vitamix-status</module>
+
+        <!-- example -->
+        <module>vitamix-example</module>
+    </modules>
+
+    <build>
+        <plugins>
+            <plugin>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>1.6</source>
+                    <target>1.6</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.google.code.findbugs</groupId>
+            <artifactId>jsr305</artifactId>
+            <version>2.0.1</version>
+            <scope>provided</scope>
+        </dependency><!-- logging -->
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>1.6.1</version>
+        </dependency>
+    </dependencies>
+</project>
